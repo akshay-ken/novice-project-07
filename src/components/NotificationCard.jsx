@@ -11,7 +11,7 @@ export function NotificationCard({
   return (
     <section className="flex flex-row mt-6 bg-Navy-50 justify-start items-center gap-x-4 p-4">
       <img src={img} className="size-14 self-start" alt="" />
-      <div className="flex flex-col">
+      <div className="flex flex-col basis-full">
         <p className="text-xl font-medium text-Gray-500">
           <span className="font-extrabold text-Navy-950"> {name} </span>{" "}
           {action}

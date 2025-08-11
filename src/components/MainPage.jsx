@@ -87,7 +87,20 @@ export function MainPage() {
   return (
     <main className="px-[4%] py-[8%] md:px-[20%] md:py-[8%] flex flex-col">
       <HeaderSection />
-      <NotificationCard />
+      {cardData.map((item) => {
+        return (
+          <NotificationCard
+            img={item.img}
+            name={item.name}
+            action={item.action}
+            post={item.post}
+            time={item.time}
+            read={item.read}
+            comment={item.comment}
+            message={item.message}
+          />
+        );
+      })}
     </main>
   );
 }
