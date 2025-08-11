@@ -1,12 +1,16 @@
 export function HeaderSection() {
   return (
-    <header className="flex flex-row justify-between">
+    <header className="flex flex-row justify-between items-center">
       <div className="flex flex-row justify-start items-center">
-        <p>
-          Notification <span className="">3</span>
+        <p className="text-2xl font-bold text-Navy-950">
+          Notifications{" "}
+          <span className="bg-Blue-badge py-1 px-4 rounded-xl text-Blue-100">
+            {" "}
+            3{" "}
+          </span>
         </p>
       </div>
-      <p>Mark all as read</p>
+      <p className="text-lg font-semibold text-Gray-600">Mark all as read</p>
     </header>
   );
 }
