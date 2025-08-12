@@ -7,9 +7,15 @@ export function NotificationCard({
   read,
   comment,
   message,
+  unRead,
 }) {
   return (
-    <section className="flex flex-row mt-6 bg-Navy-50 justify-start items-center gap-x-4 p-4">
+    <section
+      className={`flex flex-row mt-6  justify-start items-center gap-x-4 p-4 ${
+        read ? "bg-Navy-100" : null
+      }`}
+      onClick={unRead}
+    >
       <img src={img} className="size-14 self-start" alt="" />
       <div className="flex flex-col basis-full">
         <p className="text-xl font-medium text-Gray-500">
@@ -25,6 +31,7 @@ export function NotificationCard({
         {comment ? (
           <textarea
             value={message}
+            readOnly
             className="bg-white my-2 border-Gray-500 rounded-sm text-lg text-Gray-500 font-medium border-2 p-4"
             placeholder="testing"
             id=""
